@@ -1,0 +1,11 @@
+version: "2.1"
+services:
+  web:
+    image: node:8.9.4
+    ports:
+      - "3000:3000"
+    working_dir: /app
+    user: 1000:1000
+    command: "npm run dev"
+    volumes:
+      - ./:/app
